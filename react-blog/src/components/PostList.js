@@ -18,6 +18,7 @@ console.log(search,"search")
   };
 
   console.log(search.split('=')[1],"splited")
+ 
   const postList=useSelector((state)=>state.postList.list).filter((x) => search !== "" ? x.tag === search.split('=')[1] : x)
   console.log(postList,"burası post")
   return (
@@ -57,7 +58,7 @@ console.log(search,"search")
       {postList &&  postList.map((post,index)=>(
         <Grid item key={post?.index} xs={12} md={calculateMd()}>
         <Post
-        key={ index}
+        key={index}
         id={post.id}
         cat={post.cat}
         title={post.title}
